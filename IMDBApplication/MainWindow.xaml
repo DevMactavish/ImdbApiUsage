@@ -1,0 +1,23 @@
+﻿<Window x:Class="IMDBApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IMDBApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Window.Resources>
+        <SolidColorBrush x:Key="ExitScreenBackgroundColor" Color="#5381ac"/>
+        <Style x:Key="ExitScreen" TargetType="StackPanel">
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Background" Value="{StaticResource ResourceKey=ExitScreenBackgroundColor}"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel x:Name="spMain" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="782"/>
+        <StackPanel x:Name="spExit" HorizontalAlignment="Center" Orientation="Horizontal" Visibility="Collapsed" Style="{StaticResource ResourceKey=ExitScreen}"> 
+            <Button x:Name="btCancel" Content="Cancel" Width="100" Height="30" Margin="5" Click="Button_Click_1"/>
+            <Button x:Name="btExit" Content="Exit" Width="100" Height="30" Margin="5" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
